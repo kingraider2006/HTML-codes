@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+table.upper {
+position: absolute;
+top: 0px;
+right: 0px;
+left: 0px;
+}
+table.bottom {
+position: absolute;
+bottom: 0px;
+right: 0px;
+}
+table.bottomleft {
+position: absolute;
+bottom: 0px;
+left: 0px;
+}
+img.image1 {
+position: absolute;
+top: 4%;
+right: 3%;
+height: 16%;
+width: 22%;
+}
+img.image2 {
+position: absolute;
+top: 24%;
+right: 3%;
+height: 16%;
+width: 22%;
+}
+img.image3 {
+position: absolute;
+top: 44%;
+right: 3%;
+height: 16%;
+width: 22%;    
+}
+button.left {
+position: absolute;
+top: 35%;
+left: 3%;
+border-radius: 8px;
+border: 2px solid #BB8FCE;
+font-size: 24px;
+padding: 8% 4%;
+min-width: 6%;
+}
+div.center {
+position: absolute;
+top: 2%;
+left: 18%;
+overflow: auto;
+}
+    </style>
+</head>
+<body bgcolor="white">
+
+    <!-- First Table on the top -->
+    <table class='upper' border=2 cellspacing=0 cellpadding=0 bordercolor='black' height='16%' width='100%'>
+<tr>
+    <td bgcolor=#16600E width='16%'>1</td>
+    <td bgcolor=#ADD9B4 >2</td>
+</tr>
+    </table>
+    <!-- En of Table 1 -->
+
+    <!-- Second Table With big colors -->
+    <table class='bottom' border=2 cellspacing=0 cellpadding=0 bordercolor='black' height='82%' width='100%'>
+<tr>
+    <th bgcolor='#061c04' width='16%' height=4%>1</th>
+    <th rowspan="9" bgcolor=#ADD9B4 width='55%'>
+        <div class="center">
+<p id='graph1' align='left' style="visibility:hidden;font-size:1.2vw;overflow:hidden;"> Good Morning This is the function of The Button, So no <br>
+This is just an example. <br> 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+Ut enim ad minim veniam, <br>
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+Excepteur sint occaecat cupidatat non proident, <br>
+sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </th>
+    <th rowspan="9" bgcolor=#16600E>
+<img class="image1" src="https://soprema.us/wp-content/uploads/2014/12/200x200.gif">
+<img class="image2" src="https://soprema.us/wp-content/uploads/2014/12/200x200.gif">
+<img class="image3" src="https://soprema.us/wp-content/uploads/2014/12/200x200.gif">
+    </th>
+</tr>
+<tr>
+    <th width='16%' height=3%>2</th>
+</tr>
+<tr>
+    <th width='16%' height=3%>3</th>
+</tr>
+<tr>
+    <th width='16%' height=3%>4</th>
+</tr>
+<tr>
+    <th width='16%' height=3%>5</th>
+</tr>
+<tr>
+    <th style="border-top-width: 2px;" width='16%' height=3%>6</th>
+</tr>
+<tr>
+    <th width='16%' height=3%>7</th>
+</tr>
+<tr>
+    <th width='16%' height=3%>8</th>
+</tr>
+<tr>
+    <th bgcolor='#061c04' width='16%' height=59%>
+<button id='button1' onclick=showgraph() class="left" bordercolor='black' type="button">1</button>
+    </th>
+</tr>
+    </table>
+    <!-- End of Color Table -->
+
+<script>
+function showgraph() {
+document.getElementById('graph1').style.visibility = 'visible';
+document.getElementById('button1').onclick = hidegraph;
+}
+function hidegraph() {
+document.getElementById('graph1').style.visibility = 'hidden';
+document.getElementById('button1').onclick = showgraph;
+}
+</script>
+
+</body>
+</html>

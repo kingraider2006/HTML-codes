@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+<style>
+div.upper {
+position: absolute;
+top: 20px;
+left: 370px;
+}
+table.right {
+position: absolute;
+bottom: 20px;
+right: 20px;
+}
+table.left1 {
+position: absolute;
+top: 117px;
+left: 40px;
+}
+table.left2 {
+position: absolute;
+top: 452px;
+left: 40px;
+}
+button.right {
+position: absolute;
+top: 20px;
+right: 60px;
+border-radius: 8px;
+border: 2px solid #BB8FCE;
+font-size: 32px;
+padding: 22px 120px;
+}
+button.left {
+position: absolute;
+top: 800px;
+left: 40px;
+border-radius: 8px;
+border: 2px solid #BB8FCE;
+font-size: 24px;
+padding: 45px 50px;
+}
+img.right {
+position: absolute;
+bottom: 20px;
+right: 160px;
+}
+img.left {
+position: absolute;
+bottom: 20px;
+left: 160px;
+}
+</style>
+</head>
+<body bgcolor=#DAF7A6>
+    <table class="right" border=2 cellspacing=0 cellpadding=0 bordercolor='black' align='right' width=80% height=800px>    
+<tr>
+    <td height=60px bgcolor=#E59866></td>
+        </tr>
+        <td bgcolor=#F7DC6F> 
+            <img id="image1" class="left" border=1 bordercolor='black' src="http://dummyimage.com/400x200" >
+            <img id='image2' class='right' border=1 bordercolor='black' src="http://dummyimage.com/400x200" >
+        </td>
+</tr>
+    </table>
+    <button class="right" id='button1' bordercolor='black' align='right' type="button" onclick='paragraphshow()' > This is button 1 </button>
+    <!-- This is the script for the first button on the right -->
+    <script>
+        function paragraphshow() {
+            document.getElementById('lolhide').style.visibility = 'visible';
+            document.getElementById('button1').innerHTML = 'hide';
+            document.getElementById('button1').onclick = paragraphhide;
+        }
+        function paragraphhide() {
+            document.getElementById('lolhide').style.visibility = 'hidden';
+            document.getElementById('button1').innerHTML = 'show';
+            document.getElementById('button1').onclick = paragraphshow;
+        }
+    </script>  
+    <!-- End of script -->
+
+    <!-- Hidden paragraph -->
+    <div class="upper">
+    <p id="lolhide" style='visibility:hidden;font-size:22px;'>
+        Hi, I was hidden, first I thought that I don't have any purpose<br> 
+        But then The visibility Style attribute was thought of - and I came to be.
+    </p>
+    </div>
+    <!-- NO more of hidden paragraph-->
+
+    <table class='left1' border=2 cellspacing=0 cellpadding=0 bordercolor='black' align='left' width=14% height=315px>
+<tr>
+    <td  height="45px" bgcolor=#E59866>1</td>
+</tr>
+    <td  bgcolor=#F7DC6F>2</td>
+</tr>
+    <td  bgcolor=#F7DC6F>3</td>
+</tr>
+    <td  bgcolor=#F7DC6F>4</td>
+</tr>
+    <td  bgcolor=#F7DC6F>5</td>
+</tr>
+    <td  bgcolor=#F7DC6F>6</td>
+</tr>
+    <td  bgcolor=#F7DC6F>7</td>
+</tr>
+    </table>
+    <table class='left2' border=2 cellspacing=0 cellpadding=0 bordercolor='black' align='left' width=14% height=315px>
+        <tr>
+            <td height="45px" bgcolor=#E59866>1</td>
+        </tr>
+            <td  bgcolor=#F7DC6F>2</td>
+        </tr>
+    </table>
+    <button id="button2" onclick='imagechangefirst()' class="left" bordercolor='black' align='left'> This is button 2 </button>
+<script>
+    function imagechangefirst(){
+        document.getElementById('button2').style.fontSize = "12px";
+        document.getElementById('button2').style.padding = "5px 5px";
+        document.getElementById('button2').innerHTML = 'This is not going to do anything, so please dont touch it';
+    }
+</script>
+     
+
+
+
+    </body>
+</html>
